@@ -1,0 +1,152 @@
+//Fonts
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap");
+$f-weight: 700;
+//Colors
+$primary1: linear-gradient(
+  to right,
+  hsl(236, 72%, 79%) ,
+  hsl(237, 63%, 64%) 60%
+); /* Linear Gradient */
+
+$neutral1: hsl(240, 78%, 98%); /* Very Light Grayish Blue */
+$neutral2: hsl(234, 14%, 74%); /* Light Grayish Blue */
+$neutral3: hsl(233, 13%, 49%); /* Grayish Blue  */
+$neutral4: hsl(232, 13%, 33%); /* Dark Grayish Blue  */
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", serif;
+  background-color: $neutral1;
+  background-image: url(../../images/bg-top.svg),
+    url(../../images/bg-bottom.svg);
+  background-position: right 0rem, left 120%;
+  background-repeat: no-repeat;
+  background-size: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 95vh;
+  font-size: 1em;
+}
+header {
+  h1 {
+    color: $neutral3;
+  }
+  #price-switch {
+    height: 1.5rem;
+    width: 2.8rem;
+    &:focus {
+      border: none;
+      outline: none;
+    }
+    &:hover {
+      cursor: pointer;
+     
+    }
+    
+  }
+}
+
+.monthly,.annual{
+  color: $neutral2;
+  font-size: 0.8em;
+}
+main {
+  margin-top: 3rem;
+}
+.nine {
+  display: none;
+}
+
+.basic-price,
+.master-price {
+  color: $neutral4;
+  padding: 4rem;
+  -webkit-box-shadow: 10px 10px 38px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 10px 10px 38px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 10px 10px 38px 0px rgba(0, 0, 0, 0.15);
+  ul{
+    li{
+      color: $neutral4;
+    }
+  }
+  .learn{
+    background: $primary1;
+    color: $neutral1;
+    &:hover{
+      background: transparent;
+      border:2px solid hsl(237, 63%, 64%) !important;
+      color: hsl(237, 63%, 64%);
+    }
+  }
+ 
+}
+//Professional price
+.professional-price {
+  background: $primary1;
+  padding:3rem;
+  color: $neutral1;
+  ul{
+    li{
+      color: $neutral1;
+    }
+  }
+  .learn{
+    background-color: #fff;
+    color: hsl(237, 63%, 64%);
+    &:hover{
+      background: transparent;
+      border:2px solid #fff!important;
+      color:#fff;
+    }
+  }
+}
+
+button {
+  cursor: pointer;
+  padding: 0.6rem;
+  width: 15rem;
+  outline: none;
+  letter-spacing: 2px;
+ 
+}
+
+//Media Queries
+@media screen and (width <= 1200px) {
+}
+
+@media screen and (width <= 992px) {
+}
+
+@media screen and (width <= 768px) {
+  body {
+    background-image: url(../../images/bg-top.svg);
+    background-position: 30rem 0rem;
+    background-size: 60%;
+  }
+  main{
+    width: 60%;
+  }
+  .professional-price{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (width <= 600px) {
+  body {
+    background-position: 15rem 0rem;
+    background-size: 80%;
+  }
+  main{
+    width: 90%;
+  }
+}

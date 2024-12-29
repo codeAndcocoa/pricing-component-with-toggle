@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap");
+/* Linear Gradient */
+/* Very Light Grayish Blue */
+/* Light Grayish Blue */
+/* Grayish Blue  */
+/* Dark Grayish Blue  */
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", serif;
+  background-color: hsl(240, 78%, 98%);
+  background-image: url(../../images/bg-top.svg), url(../../images/bg-bottom.svg);
+  background-position: right 0rem, left 120%;
+  background-repeat: no-repeat;
+  background-size: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 95vh;
+  font-size: 1em;
+}
+
+header h1 {
+  color: hsl(233, 13%, 49%);
+}
+header #price-switch {
+  height: 1.5rem;
+  width: 2.8rem;
+}
+header #price-switch:focus {
+  border: none;
+  outline: none;
+}
+header #price-switch:hover {
+  cursor: pointer;
+}
+
+.monthly, .annual {
+  color: hsl(234, 14%, 74%);
+  font-size: 0.8em;
+}
+
+main {
+  margin-top: 3rem;
+}
+
+.nine {
+  display: none;
+}
+
+.basic-price,
+.master-price {
+  color: hsl(232, 13%, 33%);
+  padding: 4rem;
+  -webkit-box-shadow: 10px 10px 38px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 10px 10px 38px 0px rgba(0, 0, 0, 0.15);
+}
+.basic-price ul li,
+.master-price ul li {
+  color: hsl(232, 13%, 33%);
+}
+.basic-price .learn,
+.master-price .learn {
+  background: -webkit-gradient(linear, left top, right top, from(hsl(236, 72%, 79%)), color-stop(60%, hsl(237, 63%, 64%)));
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%) 60%);
+  color: hsl(240, 78%, 98%);
+}
+.basic-price .learn:hover,
+.master-price .learn:hover {
+  background: transparent;
+  border: 2px solid hsl(237, 63%, 64%) !important;
+  color: hsl(237, 63%, 64%);
+}
+
+.professional-price {
+  background: -webkit-gradient(linear, left top, right top, from(hsl(236, 72%, 79%)), color-stop(60%, hsl(237, 63%, 64%)));
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%) 60%);
+  padding: 3rem;
+  color: hsl(240, 78%, 98%);
+}
+.professional-price ul li {
+  color: hsl(240, 78%, 98%);
+}
+.professional-price .learn {
+  background-color: #fff;
+  color: hsl(237, 63%, 64%);
+}
+.professional-price .learn:hover {
+  background: transparent;
+  border: 2px solid #fff !important;
+  color: #fff;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.6rem;
+  width: 15rem;
+  outline: none;
+  letter-spacing: 2px;
+}
+
+@media screen and (width <= 768px) {
+  body {
+    background-image: url(../../images/bg-top.svg);
+    background-position: 30rem 0rem;
+    background-size: 60%;
+  }
+  main {
+    width: 60%;
+  }
+  .professional-price {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (width <= 600px) {
+  body {
+    background-position: 15rem 0rem;
+    background-size: 80%;
+  }
+  main {
+    width: 90%;
+  }
+}/*# sourceMappingURL=style.css.map */
