@@ -38,8 +38,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github Repo](https://github.com/codeAndcocoa/pricing-component-with-toggle-master.git)
-- Live Site URL: [Live Site](https://codeandcocoa.github.io/pricing-component-with-toggle-master/)
+- Solution URL: [Github Repo](https://github.com/codeAndcocoa/pricing-component-with-toggle.git)
+- Live Site URL: [Live Site](https://codeandcocoa.github.io/pricing-component-with-toggle/)
 
 ## My process
 
