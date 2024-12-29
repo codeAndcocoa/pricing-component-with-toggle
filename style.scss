@@ -40,7 +40,7 @@ header {
   h1 {
     color: $neutral3;
   }
-  #price-switch {
+  /* #price-switch {
     height: 1.5rem;
     width: 2.8rem;
     &:focus {
@@ -52,8 +52,72 @@ header {
      
     }
     
+  } */
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3rem;
+  height: 1.6rem;
+  cursor: pointer;
+}
+
+ #price-switch { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+  &:checked + .slider {
+    background:$primary1;
+  }
+  &:hover + .slider {
+    background:hsl(236, 72%, 79%);
+  }
+  
+  &:checked + .slider:before {
+    -webkit-transform: translateX(23px);
+    -ms-transform: translateX(23px);
+    transform: translateX(23px);
   }
 }
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:$primary1;
+  -webkit-transition: .4s;
+  transition: .4s;
+
+  &:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: #fff;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+}
+
+
+
+
+
+
+
+
+.slider.round {
+  border-radius: 34px;
+ &:before {
+    border-radius: 50%;
+  }
+}
+
 
 .monthly,.annual{
   color: $neutral2;
