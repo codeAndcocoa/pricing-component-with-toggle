@@ -4,7 +4,7 @@ $f-weight: 700;
 //Colors
 $primary1: linear-gradient(
   to right,
-  hsl(236, 72%, 79%) ,
+  hsl(236, 72%, 79%),
   hsl(237, 63%, 64%) 60%
 ); /* Linear Gradient */
 
@@ -40,86 +40,40 @@ header {
   h1 {
     color: $neutral3;
   }
-  /* #price-switch {
+  #price-switch {
+    --bs-form-switch-bg: none !important;
     height: 1.5rem;
     width: 2.8rem;
+    background:$primary1;
     &:focus {
       border: none;
       outline: none;
     }
     &:hover {
       cursor: pointer;
-     
+      background: hsl(236, 72%, 79%);
     }
-    
-  } */
-}
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 3rem;
-  height: 1.6rem;
-  cursor: pointer;
-}
-
- #price-switch { 
-  opacity: 0;
-  width: 0;
-  height: 0;
-  &:checked + .slider {
-    background:$primary1;
-  }
-  &:hover + .slider {
-    background:hsl(236, 72%, 79%);
-  }
-  
-  &:checked + .slider:before {
-    -webkit-transform: translateX(23px);
-    -ms-transform: translateX(23px);
-    transform: translateX(23px);
+    &:checked {
+      background:$primary1;
+    }
+    &:checked + .round {
+      left: 1.5rem;
+      transition: all 0.5s;
+    }
   }
 }
-
-.slider {
+.round {
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
   position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background:$primary1;
-  -webkit-transition: .4s;
-  transition: .4s;
-
-  &:before {
-    position: absolute;
-    content: "";
-    height: 20px;
-    width: 20px;
-    left: 3px;
-    bottom: 3px;
-    background-color: #fff;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
+  border-radius: 50%;
+  left: 0.2rem;
+  top:0.5rem;
+  transition: all 0.5s;
 }
-
-
-
-
-
-
-
-
-.slider.round {
-  border-radius: 34px;
- &:before {
-    border-radius: 50%;
-  }
-}
-
-
-.monthly,.annual{
+.monthly,
+.annual {
   color: $neutral2;
   font-size: 0.8em;
 }
@@ -137,39 +91,38 @@ main {
   -webkit-box-shadow: 10px 10px 38px 0px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 10px 10px 38px 0px rgba(0, 0, 0, 0.15);
   box-shadow: 10px 10px 38px 0px rgba(0, 0, 0, 0.15);
-  ul{
-    li{
+  ul {
+    li {
       color: $neutral4;
     }
   }
-  .learn{
+  .learn {
     background: $primary1;
     color: $neutral1;
-    &:hover{
+    &:hover {
       background: transparent;
-      border:2px solid hsl(237, 63%, 64%) !important;
+      border: 2px solid hsl(237, 63%, 64%) !important;
       color: hsl(237, 63%, 64%);
     }
   }
- 
 }
 //Professional price
 .professional-price {
   background: $primary1;
-  padding:3rem;
+  padding: 3rem;
   color: $neutral1;
-  ul{
-    li{
+  ul {
+    li {
       color: $neutral1;
     }
   }
-  .learn{
+  .learn {
     background-color: #fff;
     color: hsl(237, 63%, 64%);
-    &:hover{
+    &:hover {
       background: transparent;
-      border:2px solid #fff!important;
-      color:#fff;
+      border: 2px solid #fff !important;
+      color: #fff;
     }
   }
 }
@@ -180,7 +133,6 @@ button {
   width: 15rem;
   outline: none;
   letter-spacing: 2px;
- 
 }
 
 //Media Queries
@@ -196,10 +148,10 @@ button {
     background-position: 30rem 0rem;
     background-size: 60%;
   }
-  main{
+  main {
     width: 60%;
   }
-  .professional-price{
+  .professional-price {
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
@@ -210,7 +162,7 @@ button {
     background-position: 15rem 0rem;
     background-size: 80%;
   }
-  main{
+  main {
     width: 90%;
   }
 }
